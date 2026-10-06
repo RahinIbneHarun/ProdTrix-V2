@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { MacWindowControls } from "@/app/components/mac-window-controls";
+import { MacWindowControls } from "@/components/mac-window-controls";
 
 const supportJourney = [
   {

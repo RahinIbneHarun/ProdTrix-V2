@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 export interface SubMenuItem {
   title: string;
   href: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 export interface MenuItem {

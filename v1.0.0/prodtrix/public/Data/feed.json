@@ -1,0 +1,652 @@
+[
+  {
+    "id": "1",
+    "author": {
+      "id": "u1",
+      "name": "Ayasha Malik",
+      "role": "Full Stack Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=47"
+    },
+    "title": "Async/Await & Promises",
+    "content": "Mastering asynchronous JavaScript is the key to writing non-blocking, performant web apps. This lesson breaks down how Promises chain and how async/await simplifies the syntax.",
+    "timeAgo": "2h ago",
+    "likes": 214,
+    "commentsCount": 31,
+    "shares": 18,
+    "views": 4200,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200",
+      "title": "Async/Await & Promises"
+    },
+    "academicMeta": {
+      "topic": "Web Development Fundamentals",
+      "class": "Ch. 3 · JavaScript Essentials",
+      "chapter": "Lesson 7 · Async/Await & Promises"
+    }
+  },
+  {
+    "id": "2",
+    "author": {
+      "id": "u2",
+      "name": "Tomás Rivera",
+      "role": "UX Researcher",
+      "avatar": "https://i.pravatar.cc/80?img=15"
+    },
+    "title": "Hick's Law in Interface Design",
+    "content": "The time it takes to make a decision increases with the number and complexity of choices. Here's how I apply Hick's Law when designing navigation menus.",
+    "timeAgo": "5h ago",
+    "likes": 128,
+    "commentsCount": 14,
+    "shares": 9,
+    "views": 2100,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200",
+      "title": "Hick's Law in Interface Design"
+    },
+    "academicMeta": {
+      "topic": "UX Design Principles",
+      "class": "Ch. 5 · Cognitive Load",
+      "chapter": "Lesson 2 · Hick's Law in Interface Design"
+    }
+  },
+  {
+    "id": "3",
+    "author": {
+      "id": "u3",
+      "name": "Elena Rostova",
+      "role": "Cloud Architect",
+      "avatar": "https://i.pravatar.cc/80?img=32"
+    },
+    "title": "Container Orchestration with Kubernetes",
+    "content": "Managing microservices at scale requires robust automated deployment, scaling, and operational tooling. We explore Pod lifecycles, Services, and Ingress routing controllers.",
+    "timeAgo": "8h ago",
+    "likes": 342,
+    "commentsCount": 45,
+    "shares": 52,
+    "views": 5800,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200",
+      "title": "Container Orchestration with Kubernetes"
+    },
+    "academicMeta": {
+      "topic": "Cloud Computing & DevOps",
+      "class": "Ch. 4 · Orchestration at Scale",
+      "chapter": "Lesson 3 · Pods, Services & Ingress"
+    }
+  },
+  {
+    "id": "4",
+    "author": {
+      "id": "u4",
+      "name": "Devon Vance",
+      "role": "Machine Learning Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=12"
+    },
+    "title": "Attention Mechanisms & Transformer Architecture",
+    "content": "Why did Transformers replace RNNs and LSTMs for natural language processing? An intuitive guide to Self-Attention, Query-Key-Value matrices, and parallel training pipelines.",
+    "timeAgo": "11h ago",
+    "likes": 589,
+    "commentsCount": 78,
+    "shares": 94,
+    "views": 9400,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200",
+      "title": "Attention Mechanisms & Transformer Architecture"
+    },
+    "academicMeta": {
+      "topic": "Deep Learning Systems",
+      "class": "Ch. 8 · Sequence Models",
+      "chapter": "Lesson 5 · Self-Attention in Transformers"
+    }
+  },
+  {
+    "id": "5",
+    "author": {
+      "id": "u5",
+      "name": "Priya Patel",
+      "role": "Database Administrator",
+      "avatar": "https://i.pravatar.cc/80?img=28"
+    },
+    "title": "B-Tree vs. LSM-Tree Indexing",
+    "content": "Read-heavy vs. write-heavy architectures demand fundamentally different storage engines. Here is an architectural deep dive into how PostgreSQL and Cassandra structure indices on disk.",
+    "timeAgo": "1d ago",
+    "likes": 195,
+    "commentsCount": 22,
+    "shares": 31,
+    "views": 3300,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200",
+      "title": "B-Tree vs. LSM-Tree Indexing"
+    },
+    "academicMeta": {
+      "topic": "Database Internals",
+      "class": "Ch. 2 · Storage Engines",
+      "chapter": "Lesson 4 · Indexing Data Structures"
+    }
+  },
+  {
+    "id": "6",
+    "author": {
+      "id": "u6",
+      "name": "Liam Gallagher",
+      "role": "Information Security Analyst",
+      "avatar": "https://i.pravatar.cc/80?img=60"
+    },
+    "title": "OAuth 2.0 & OpenID Connect Explained",
+    "content": "Understanding the precise difference between authentication and authorization. Learn how Authorization Code Grants with PKCE safeguard modern single-page and mobile apps.",
+    "timeAgo": "1d ago",
+    "likes": 412,
+    "commentsCount": 53,
+    "shares": 67,
+    "views": 6700,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200",
+      "title": "OAuth 2.0 & OpenID Connect Explained"
+    },
+    "academicMeta": {
+      "topic": "Cybersecurity & Identity",
+      "class": "Ch. 6 · Web Security Protocols",
+      "chapter": "Lesson 1 · Delegated Authorization with OAuth"
+    }
+  },
+  {
+    "id": "7",
+    "author": {
+      "id": "u7",
+      "name": "Marcus Chen",
+      "role": "Distributed Systems Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=33"
+    },
+    "title": "Raft Consensus Algorithm",
+    "content": "Leader election, log replication, and safety guarantees unpacked. A step-by-step breakdown of how distributed state machines achieve fault tolerance without Paxos complexity.",
+    "timeAgo": "1d ago",
+    "likes": 328,
+    "commentsCount": 39,
+    "shares": 44,
+    "views": 5100,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200",
+      "title": "Raft Consensus Algorithm"
+    },
+    "academicMeta": {
+      "topic": "Distributed Systems",
+      "class": "Ch. 7 · Fault Tolerance & Consensus",
+      "chapter": "Lesson 4 · The Raft Protocol"
+    }
+  },
+  {
+    "id": "8",
+    "author": {
+      "id": "u8",
+      "name": "Amina Diop",
+      "role": "Frontend Architect",
+      "avatar": "https://i.pravatar.cc/80?img=25"
+    },
+    "title": "React Server Components Deep Dive",
+    "content": "Eliminating client-side waterfall requests and shrinking bundle sizes to zero bytes for data-heavy sections. Here is how RSC bridges the gap between server streaming and interactive client islands.",
+    "timeAgo": "2d ago",
+    "likes": 476,
+    "commentsCount": 61,
+    "shares": 83,
+    "views": 7800,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200",
+      "title": "React Server Components Deep Dive"
+    },
+    "academicMeta": {
+      "topic": "Advanced Web Frameworks",
+      "class": "Ch. 4 · Modern React Paradigms",
+      "chapter": "Lesson 3 · React Server Components"
+    }
+  },
+  {
+    "id": "9",
+    "author": {
+      "id": "u9",
+      "name": "Jonas Lindqvist",
+      "role": "Systems Programmer",
+      "avatar": "https://i.pravatar.cc/80?img=68"
+    },
+    "title": "Memory Safety Without Garbage Collection in Rust",
+    "content": "Ownership, borrowing, and lifetimes enforce compile-time guarantees against dangling pointers and data races. A walkthrough of RAII principles in modern systems development.",
+    "timeAgo": "2d ago",
+    "likes": 519,
+    "commentsCount": 72,
+    "shares": 65,
+    "views": 8900,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200",
+      "title": "Memory Safety Without Garbage Collection in Rust"
+    },
+    "academicMeta": {
+      "topic": "Systems Programming",
+      "class": "Ch. 2 · Memory Models",
+      "chapter": "Lesson 1 · Borrowing and Lifetimes"
+    }
+  },
+  {
+    "id": "10",
+    "author": {
+      "id": "u10",
+      "name": "Siddharth Rao",
+      "role": "Embedded Systems Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=11"
+    },
+    "title": "Hardware Interrupts & FreeRTOS Task Scheduling",
+    "content": "Handling low-latency external triggers with ISRs and delegating intensive computation to prioritized FreeRTOS tasks using queues and binary semaphores.",
+    "timeAgo": "3d ago",
+    "likes": 264,
+    "commentsCount": 19,
+    "shares": 27,
+    "views": 3900,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
+      "title": "Hardware Interrupts & FreeRTOS Task Scheduling"
+    },
+    "academicMeta": {
+      "topic": "Real-Time Embedded Systems",
+      "class": "Ch. 5 · RTOS Fundamentals",
+      "chapter": "Lesson 2 · Task Synchronization & ISRs"
+    }
+  },
+  {
+    "id": "11",
+    "author": {
+      "id": "u11",
+      "name": "Chloe Dupont",
+      "role": "Design Systems Lead",
+      "avatar": "https://i.pravatar.cc/80?img=49"
+    },
+    "title": "Design Tokens & Cross-Platform Theming",
+    "content": "Structuring semantic tokens from primitive color ramps to component-level scopes. How we maintain strict UI parity across Web, iOS, and Android using style-dictionary pipelines.",
+    "timeAgo": "3d ago",
+    "likes": 310,
+    "commentsCount": 28,
+    "shares": 40,
+    "views": 4600,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200",
+      "title": "Design Tokens & Cross-Platform Theming"
+    },
+    "academicMeta": {
+      "topic": "Design Systems Architecture",
+      "class": "Ch. 3 · Token Architecture",
+      "chapter": "Lesson 4 · Multi-Platform Export Pipelines"
+    }
+  },
+  {
+    "id": "12",
+    "author": {
+      "id": "u12",
+      "name": "Carlos Gomez",
+      "role": "Network Architect",
+      "avatar": "https://i.pravatar.cc/80?img=59"
+    },
+    "title": "HTTP/3 and QUIC Protocol Internals",
+    "content": "Why TCP head-of-line blocking stalled modern web performance and how UDP-based QUIC connection multiplexing enables faster handshakes and mobile connection migration.",
+    "timeAgo": "3d ago",
+    "likes": 380,
+    "commentsCount": 41,
+    "shares": 58,
+    "views": 6100,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200",
+      "title": "HTTP/3 and QUIC Protocol Internals"
+    },
+    "academicMeta": {
+      "topic": "Computer Networks",
+      "class": "Ch. 6 · Transport & Application Protocols",
+      "chapter": "Lesson 5 · QUIC and Zero-RTT Handshakes"
+    }
+  },
+  {
+    "id": "13",
+    "author": {
+      "id": "u13",
+      "name": "Mei-Ling Zhou",
+      "role": "Computer Vision Researcher",
+      "avatar": "https://i.pravatar.cc/80?img=26"
+    },
+    "title": "Feature Extraction with CNNs vs. Vision Transformers",
+    "content": "Inductive bias vs. global receptive fields: evaluating spatial locality in convolutional filters versus patch projection self-attention in high-resolution image segmentation.",
+    "timeAgo": "4d ago",
+    "likes": 445,
+    "commentsCount": 58,
+    "shares": 72,
+    "views": 7300,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200",
+      "title": "Feature Extraction with CNNs vs. Vision Transformers"
+    },
+    "academicMeta": {
+      "topic": "Computer Vision",
+      "class": "Ch. 7 · Visual Recognition Models",
+      "chapter": "Lesson 3 · Patch Embeddings & ViT"
+    }
+  },
+  {
+    "id": "14",
+    "author": {
+      "id": "u14",
+      "name": "Kenji Sato",
+      "role": "Site Reliability Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=53"
+    },
+    "title": "Distributed Tracing with OpenTelemetry",
+    "content": "Context propagation using W3C tracecontext headers across asynchronous message brokers. Diagnosing high p99 latency spikes in distributed microservice topologies.",
+    "timeAgo": "4d ago",
+    "likes": 298,
+    "commentsCount": 33,
+    "shares": 39,
+    "views": 4900,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200",
+      "title": "Distributed Tracing with OpenTelemetry"
+    },
+    "academicMeta": {
+      "topic": "Observability & SRE",
+      "class": "Ch. 3 · Telemetry Pipelines",
+      "chapter": "Lesson 2 · Spans, Context & Trace Graphs"
+    }
+  },
+  {
+    "id": "15",
+    "author": {
+      "id": "u15",
+      "name": "Nadia Al-Mansoor",
+      "role": "Data Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=44"
+    },
+    "title": "Building Reliable Lakehouses with Delta Lake",
+    "content": "Bringing ACID transactions and schema enforcement to Parquet-backed data lakes. A look into optimistic concurrency control and time travel metadata catalogs.",
+    "timeAgo": "5d ago",
+    "likes": 367,
+    "commentsCount": 35,
+    "shares": 46,
+    "views": 5300,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200",
+      "title": "Building Reliable Lakehouses with Delta Lake"
+    },
+    "academicMeta": {
+      "topic": "Big Data Engineering",
+      "class": "Ch. 5 · Modern Storage Formats",
+      "chapter": "Lesson 1 · ACID Lakehouse Architectures"
+    }
+  },
+  {
+    "id": "16",
+    "author": {
+      "id": "u16",
+      "name": "Alexei Volkov",
+      "role": "Cryptographer",
+      "avatar": "https://i.pravatar.cc/80?img=52"
+    },
+    "title": "Zero-Knowledge Proofs: An Introduction to zk-SNARKs",
+    "content": "Proving computational knowledge without revealing underlying witness data. Exploring arithmetic circuits, R1CS representation, and elliptic curve pairing cryptography.",
+    "timeAgo": "5d ago",
+    "likes": 682,
+    "commentsCount": 91,
+    "shares": 115,
+    "views": 10800,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200",
+      "title": "Zero-Knowledge Proofs: An Introduction to zk-SNARKs"
+    },
+    "academicMeta": {
+      "topic": "Applied Cryptography",
+      "class": "Ch. 9 · Advanced Proof Systems",
+      "chapter": "Lesson 4 · zk-SNARKs Construction"
+    }
+  },
+  {
+    "id": "17",
+    "author": {
+      "id": "u17",
+      "name": "Fatima Zahra",
+      "role": "Backend Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=36"
+    },
+    "title": "Event Sourcing and CQRS in Banking Systems",
+    "content": "Why traditional CRUD architectures fail in audit-sensitive domains. Storing immutable domain events as single sources of truth with decoupled read projections.",
+    "timeAgo": "6d ago",
+    "likes": 421,
+    "commentsCount": 50,
+    "shares": 61,
+    "views": 6400,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200",
+      "title": "Event Sourcing and CQRS in Banking Systems"
+    },
+    "academicMeta": {
+      "topic": "Enterprise Architecture",
+      "class": "Ch. 4 · Domain-Driven Design",
+      "chapter": "Lesson 6 · Event Sourcing & CQRS"
+    }
+  },
+  {
+    "id": "18",
+    "author": {
+      "id": "u18",
+      "name": "Oliver Hansen",
+      "role": "Mobile Developer",
+      "avatar": "https://i.pravatar.cc/80?img=69"
+    },
+    "title": "Declarative UI State with Jetpack Compose & SwiftUi",
+    "content": "Comparing state hoisting, unidirectional data flow, and recomposition semantics across modern Android and iOS declarative development environments.",
+    "timeAgo": "6d ago",
+    "likes": 277,
+    "commentsCount": 24,
+    "shares": 33,
+    "views": 4100,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=1200",
+      "title": "Declarative UI State with Jetpack Compose & SwiftUI"
+    },
+    "academicMeta": {
+      "topic": "Native Mobile Engineering",
+      "class": "Ch. 3 · Modern UI Paradigms",
+      "chapter": "Lesson 2 · State Hoisting & Recomposition"
+    }
+  },
+  {
+    "id": "19",
+    "author": {
+      "id": "u19",
+      "name": "Hannah Abbott",
+      "role": "Algorithms Instructor",
+      "avatar": "https://i.pravatar.cc/80?img=38"
+    },
+    "title": "Dynamic Programming: Breaking the Memoization Barrier",
+    "content": "Transitioning from top-down recursive memoization to bottom-up tabular optimization. Analyzing space reduction techniques using state sliding windows.",
+    "timeAgo": "1w ago",
+    "likes": 534,
+    "commentsCount": 63,
+    "shares": 79,
+    "views": 8200,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1509869175650-a1c978349568?w=1200",
+      "title": "Dynamic Programming: Breaking the Memoization Barrier"
+    },
+    "academicMeta": {
+      "topic": "Data Structures & Algorithms",
+      "class": "Ch. 6 · Optimization Techniques",
+      "chapter": "Lesson 3 · Tabulation & Space Optimization"
+    }
+  },
+  {
+    "id": "20",
+    "author": {
+      "id": "u20",
+      "name": "Kwame Asante",
+      "role": "IoT Solutions Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=61"
+    },
+    "title": "Low-Power MQTT & CoAP Communication",
+    "content": "Designing telemetry nodes that survive on coin cells for years. Measuring radio duty cycling, payload compression via Protocol Buffers, and broker keep-alive limits.",
+    "timeAgo": "1w ago",
+    "likes": 305,
+    "commentsCount": 27,
+    "shares": 38,
+    "views": 4400,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1200",
+      "title": "Low-Power MQTT & CoAP Communication"
+    },
+    "academicMeta": {
+      "topic": "Internet of Things",
+      "class": "Ch. 4 · Edge Connectivity",
+      "chapter": "Lesson 5 · Lightweight Network Protocols"
+    }
+  },
+  {
+    "id": "21",
+    "author": {
+      "id": "u21",
+      "name": "Ingrid Berg",
+      "role": "Security Researcher",
+      "avatar": "https://i.pravatar.cc/80?img=43"
+    },
+    "title": "Mitigating Cross-Site Request Forgery (CSRF) & XSS",
+    "content": "Why SameSite cookie attributes changed web security, and why Content Security Policy (CSP) headers remain the gold standard against script injection vulnerabilities.",
+    "timeAgo": "1w ago",
+    "likes": 461,
+    "commentsCount": 49,
+    "shares": 71,
+    "views": 7100,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200",
+      "title": "Mitigating Cross-Site Request Forgery (CSRF) & XSS"
+    },
+    "academicMeta": {
+      "topic": "Web Application Security",
+      "class": "Ch. 2 · Client-Side Vectors",
+      "chapter": "Lesson 3 · Defense-in-Depth Defenses"
+    }
+  },
+  {
+    "id": "22",
+    "author": {
+      "id": "u22",
+      "name": "Tariq Mansour",
+      "role": "DevOps Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=58"
+    },
+    "title": "Infrastructure as Code with Terraform and GitOps",
+    "content": "Eliminating infrastructure drift using declarative HCL modules, remote S3 state locks with DynamoDB, and automated ArgoCD reconciliation pipelines.",
+    "timeAgo": "1w ago",
+    "likes": 378,
+    "commentsCount": 38,
+    "shares": 49,
+    "views": 5600,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=1200",
+      "title": "Infrastructure as Code with Terraform and GitOps"
+    },
+    "academicMeta": {
+      "topic": "Cloud Infrastructure Automation",
+      "class": "Ch. 5 · Declarative Provisioning",
+      "chapter": "Lesson 1 · State Management & GitOps"
+    }
+  },
+  {
+    "id": "23",
+    "author": {
+      "id": "u23",
+      "name": "Sofia Rossi",
+      "role": "Product Designer",
+      "avatar": "https://i.pravatar.cc/80?img=48"
+    },
+    "title": "Fitts's Law and Touch Targets on Mobile",
+    "content": "Calculating target acquisition speed based on distance and width. Why thumb zone ergonomics dictate bottom navigation placement and minimum 48x48dp target sizing.",
+    "timeAgo": "1w ago",
+    "likes": 289,
+    "commentsCount": 19,
+    "shares": 25,
+    "views": 3800,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200",
+      "title": "Fitts's Law and Touch Targets on Mobile"
+    },
+    "academicMeta": {
+      "topic": "Human-Computer Interaction",
+      "class": "Ch. 2 · Ergonomics & Motor Movement",
+      "chapter": "Lesson 3 · Fitts's Law in Modern Mobile"
+    }
+  },
+  {
+    "id": "24",
+    "author": {
+      "id": "u24",
+      "name": "Benjamin Clarke",
+      "role": "Compiler Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=70"
+    },
+    "title": "AST Parsing and Intermediate Representations in LLVM",
+    "content": "From Lexer tokens and Abstract Syntax Trees to Static Single Assignment (SSA) form. An exploration of compiler frontend pipelines and optimization passes.",
+    "timeAgo": "2w ago",
+    "likes": 403,
+    "commentsCount": 42,
+    "shares": 54,
+    "views": 6200,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200",
+      "title": "AST Parsing and Intermediate Representations in LLVM"
+    },
+    "academicMeta": {
+      "topic": "Compiler Construction",
+      "class": "Ch. 4 · Intermediate Representations",
+      "chapter": "Lesson 2 · SSA Form & Optimizations"
+    }
+  },
+  {
+    "id": "25",
+    "author": {
+      "id": "u25",
+      "name": "Deepa Sundaram",
+      "role": "NLP Engineer",
+      "avatar": "https://i.pravatar.cc/80?img=35"
+    },
+    "title": "Vector Embeddings & Approximate Nearest Neighbors",
+    "content": "Comparing HNSW graphs vs. IVF indexes in vector databases. How dense vector embeddings enable sub-millisecond semantic search over millions of high-dimensional documents.",
+    "timeAgo": "2w ago",
+    "likes": 562,
+    "commentsCount": 68,
+    "shares": 88,
+    "views": 8700,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200",
+      "title": "Vector Embeddings & Approximate Nearest Neighbors"
+    },
+    "academicMeta": {
+      "topic": "Natural Language Processing",
+      "class": "Ch. 6 · Information Retrieval",
+      "chapter": "Lesson 4 · High-Dimensional Vector Search"
+    }
+  },
+  {
+    "id": "26",
+    "author": {
+      "id": "u26",
+      "name": "Lucas Silva",
+      "role": "Game Engine Programmer",
+      "avatar": "https://i.pravatar.cc/80?img=67"
+    },
+    "title": "Entity Component System (ECS) Architecture",
+    "content": "Ditching deep object-oriented inheritance hierarchies for cache-friendly data-oriented design. Memory layouts, component arrays, and parallel system iteration.",
+    "timeAgo": "2w ago",
+    "likes": 395,
+    "commentsCount": 37,
+    "shares": 51,
+    "views": 5900,
+    "media": {
+      "url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200",
+      "title": "Entity Component System (ECS) Architecture"
+    },
+    "academicMeta": {
+      "topic": "Game Engine Development",
+      "class": "Ch. 3 · Data-Oriented Design",
+      "chapter": "Lesson 1 · ECS vs OOP Architecture"
+    }
+  }
+]

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { MacWindowControls } from "@/app/components/mac-window-controls";
+import { MacWindowControls } from "@/components/mac-window-controls";
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center px-4">
+    <div className="relative px-4 py-16">
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary/20 blur-[140px] pointer-events-none dark:block hidden" />
 
       <div className="relative z-10 grid w-full max-w-5xl grid-cols-1 gap-14 items-center lg:grid-cols-2">

@@ -1,18 +1,18 @@
 "use client";
 
-import { BrandLogo } from "@/app/components/shared/BrandLogo";
-import { SiteFooter } from "@/app/components/shared/Site-footer";
-import { SidebarNav } from "@/app/components/shared/Sidebar-nav";
+import { BrandLogo } from "@/components/shared/BrandLogo";
+import { SiteFooter } from "@/components/shared/SiteFooter";
+import { SidebarNav } from "@/components/shared/SidebarNav";
 import { Bell, Home, Menu, Search, Settings, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useState } from "react";
 
-export default function ClientLayoutWrapper({
+const ClientLayoutWrapper= ({
   children,
 }: {
   children: React.ReactNode;
-}) {
+})=> {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,7 +22,8 @@ export default function ClientLayoutWrapper({
     pathname.startsWith("/login") ||
     pathname.startsWith("/signup") ||
     pathname.startsWith("/support") ||
-    pathname.startsWith("/about");
+    pathname.startsWith("/Feed") ||
+    pathname.startsWith("/About");
 
   if (pathname.startsWith("/drawPage")) {
     return <div className="h-screen w-screen overflow-hidden">{children}</div>;
@@ -48,7 +49,7 @@ export default function ClientLayoutWrapper({
               <Link href="/Home" className="hover:text-foreground">
                 Home
               </Link>
-              <Link href="/about" className="hover:text-foreground">
+              <Link href="/About" className="hover:text-foreground">
                 About
               </Link>
               <Link
@@ -150,7 +151,7 @@ export default function ClientLayoutWrapper({
         <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-border bg-card/95 px-4 pr-8">
           <div className="flex items-center gap-4">
             <Link
-              href="/feed"
+              href="/Feed"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
             >
               <Home className="h-3.5 w-3.5" />
@@ -209,3 +210,4 @@ export default function ClientLayoutWrapper({
     </div>
   );
 }
+export default ClientLayoutWrapper;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BrandLogo } from "@/app/components/shared/BrandLogo";
+import { BrandLogo } from "@/components/shared/BrandLogo";
 
 const footerColumns = [
   {
