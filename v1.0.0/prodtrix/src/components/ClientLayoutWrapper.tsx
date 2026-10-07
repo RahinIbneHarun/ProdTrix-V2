@@ -8,11 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useState } from "react";
 
-const ClientLayoutWrapper= ({
-  children,
-}: {
-  children: React.ReactNode;
-})=> {
+const ClientLayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -23,7 +19,8 @@ const ClientLayoutWrapper= ({
     pathname.startsWith("/signup") ||
     pathname.startsWith("/support") ||
     pathname.startsWith("/Feed") ||
-    pathname.startsWith("/About");
+    pathname.startsWith("/About") ||
+    pathname.startsWith("/Profile");
 
   if (pathname.startsWith("/drawPage")) {
     return <div className="h-screen w-screen overflow-hidden">{children}</div>;
@@ -209,5 +206,5 @@ const ClientLayoutWrapper= ({
       </div>
     </div>
   );
-}
+};
 export default ClientLayoutWrapper;

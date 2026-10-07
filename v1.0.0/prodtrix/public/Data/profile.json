@@ -1,0 +1,75 @@
+{
+  "profile": {
+    "name": "ProdTrix Demo",
+    "headline": "Learner · Web Development",
+    "handle": "@prodtrix_demo",
+    "bio": "Learner · Web Development. Building things one commit at a time.",
+    "field": "Computer Science",
+    "status": "Active"
+  },
+  "stats": [
+    { "label": "Posts", "value": 24 },
+    { "label": "Likes", "value": "1.2k" },
+    { "label": "Followers", "value": 128 },
+    { "label": "Requests", "value": 6 }
+  ],
+  "weekly": [
+    { "day": "Mon", "count": 3 },
+    { "day": "Tue", "count": 5 },
+    { "day": "Wed", "count": 2 },
+    { "day": "Thu", "count": 7 },
+    { "day": "Fri", "count": 4 },
+    { "day": "Sat", "count": 1 },
+    { "day": "Sun", "count": 6 }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "title": "Async/Await & Promises",
+      "topic": "Web Development",
+      "date": "2 days ago",
+      "likes": 214,
+      "comments": 31
+    },
+    {
+      "id": "p2",
+      "title": "REST vs GraphQL",
+      "topic": "System Design",
+      "date": "5 days ago",
+      "likes": 98,
+      "comments": 12
+    },
+    {
+      "id": "p3",
+      "title": "Understanding React Keys",
+      "topic": "Web Development",
+      "date": "1 week ago",
+      "likes": 143,
+      "comments": 19
+    },
+    {
+      "id": "p4",
+      "title": "Designing a URL Shortener",
+      "topic": "System Design",
+      "date": "2 weeks ago",
+      "likes": 187,
+      "comments": 24
+    },
+    {
+      "id": "p5",
+      "title": "Pointers in C++",
+      "topic": "Programming",
+      "date": "3 weeks ago",
+      "likes": 76,
+      "comments": 8
+    },
+    {
+      "id": "p6",
+      "title": "CSS Grid Basics",
+      "topic": "UI / UX",
+      "date": "1 month ago",
+      "likes": 112,
+      "comments": 15
+    }
+  ]
+}
