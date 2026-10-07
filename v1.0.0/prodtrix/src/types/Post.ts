@@ -1,6 +1,9 @@
 export interface Post {
   id: string;
-  author: { name: string; role: string; avatar?: string };
+  author: {
+    name: string;
+    role: string;
+  };
   topic: string;
   chapter: string;
   content: string;
