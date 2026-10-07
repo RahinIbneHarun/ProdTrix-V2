@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" 
+    className="h-full antialiased" data-theme="light">
       <body cz-shortcut-listen="true">
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
