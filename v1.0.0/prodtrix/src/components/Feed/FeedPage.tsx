@@ -111,7 +111,7 @@ const FeedPage = () => {
   });
 
   return (
-    <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6">
+    <div className="mx-auto flex container gap-6 px-4 py-6">
       {/* LEFT: profile + topics (desktop only) */}
       <aside className="hidden w-56 shrink-0 lg:block">
         <div className="sticky top-20 space-y-4">
