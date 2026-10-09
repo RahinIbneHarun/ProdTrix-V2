@@ -1,162 +1,207 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { ThumbsUp, MessageSquare, Share2, MoreHorizontal } from "lucide-react";
-import { Post } from "@/interfaces/Post";
-import { Comment } from "@/interfaces/Comment";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { BadgeCheck, BarChart3, Bookmark, MessageCircle, MousePointerClick, Share2 } from "lucide-react";
+import { toast } from "sonner";
+import { getCreator } from "@/Data/feed/feed-data";
+import type { FeedPost } from "@/interfaces/feed.interface";
+import { filtersToQuery, relativeTime } from "@/lib/feed/utils";
+import { cn } from "@/lib/utils";
+import { useFeedStore, usePostComments } from "@/store/feed-store";
+import { CommentsSection } from "./CommentsSection";
+import { CreatorAvatar } from "./CreatorAvatar";
+import { FollowButton } from "./FollowButton";
+import { InsightsDialog } from "./InsightsDialog";
+import { PostMenu } from "./PostMenu";
+import { ReactionBar } from "./ReactionBar";
+import { ShareDialog, sharePost } from "./ShareDialog";
+import { VersionBadge } from "./VersionBadge";
 
-interface PostCardProps {
-  post: Post;
-}
-
-const PostCard = ({ post }: PostCardProps) => {
-  const [liked, setLiked] = useState(false);
-  const [following, setFollowing] = useState(false);
-  const [shareCount, setShareCount] = useState(post.shares);
-  const [copied, setCopied] = useState(false);
+export function PostCard({ post }: { post: FeedPost }) {
+  const router = useRouter();
+  const creator = getCreator(post.creatorId);
+  const isSaved = useFeedStore((s) => Boolean(s.saved[post.id]));
+  const toggleSaved = useFeedStore((s) => s.toggleSaved);
+  const [shareOpen, setShareOpen] = useState(false);
+  const [insightsOpen, setInsightsOpen] = useState(false);
   const [commentsOpen, setCommentsOpen] = useState(false);
-  const [comments, setComments] = useState<Comment[]>([]);
-  const [draft, setDraft] = useState("");
+  const commentCount = usePostComments(post.id).length;
 
-  const likeCount = post.likes + (liked ? 1 : 0);
-  const commentCount = post.comments + comments.length;
+  if (!creator) return null;
 
-  const handleShare = async () => {
-    const link = `${window.location.origin}/Feed#post-${post.id}`;
-    try {
-      await navigator.clipboard.writeText(link);
-      setShareCount((c) => c + 1);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // clipboard not available
+  const contentHref = `/feed/content/${post.id}`;
+
+  const onSave = () => {
+    const nowSaved = toggleSaved(post.id);
+    if (nowSaved) {
+      toast.success("Post saved", {
+        action: { label: "View", onClick: () => router.push("/feed/saved") },
+      });
+    } else {
+      toast("Removed from Saved");
     }
   };
 
-  const handleComment = (e: FormEvent) => {
-    e.preventDefault();
-    const text = draft.trim();
-    if (!text) return;
-    setComments((prev) => [...prev, { id: `${Date.now()}`, text }]);
-    setDraft("");
-  };
-
   return (
-    <article
-      id={`post-${post.id}`}
-      className="overflow-hidden rounded-lg border border-border bg-card"
-    >
-      {/* Header */}
-      <div className="flex items-start gap-3 p-4 pb-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
-          {post.author.name[0]}
-        </div>
-
+    <article className="overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm">
+      {/* Creator header */}
+      <header className="flex items-start gap-3 p-4 pb-2">
+        <Link href={`/feed/creator/${creator.id}`} aria-label={`${creator.name}'s profile`}>
+          <CreatorAvatar creator={creator} size={42} />
+        </Link>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-semibold text-foreground">
-            {post.author.name}
-          </p>
+          <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+            <Link
+              href={`/feed/creator/${creator.id}`}
+              className="truncate text-sm font-semibold hover:underline"
+            >
+              {creator.name}
+            </Link>
+            {creator.verified && (
+              <BadgeCheck className="size-4 shrink-0 fill-sky-500 text-white" aria-label="Verified" />
+            )}
+            <VersionBadge post={post} />
+          </div>
           <p className="truncate text-xs text-muted-foreground">
-            {post.author.role} · {post.timeAgo}
+            @{creator.handle} · <time suppressHydrationWarning dateTime={post.createdAt}>{relativeTime(post.createdAt)}</time>
           </p>
         </div>
+        <FollowButton creatorId={creator.id} className="mt-1 shrink-0" />
+        <PostMenu post={post} />
+      </header>
 
-        <button
-          type="button"
-          onClick={() => setFollowing((f) => !f)}
-          className="h-8 shrink-0 rounded-full border border-primary px-4 text-xs font-medium text-primary hover:bg-primary/10"
+      {/* Chapter • Topic taxonomy */}
+      <div className="flex flex-wrap items-center gap-1.5 px-4 text-xs">
+        <Link
+          href={`/feed${filtersToQuery({ chapter: post.chapter })}`}
+          className="rounded-md bg-secondary/10 px-2 py-0.5 font-medium text-foreground ring-1 ring-inset ring-border hover:bg-muted"
         >
-          {following ? "Following" : "Follow"}
-        </button>
-
-        <button
-          type="button"
-          aria-label="More"
-          className="p-1 text-muted-foreground hover:text-foreground"
+          [{post.chapter}]
+        </Link>
+        <span aria-hidden className="text-muted-foreground">•</span>
+        <Link
+          href={`/feed${filtersToQuery({ topic: post.topic })}`}
+          className="rounded-md px-1.5 py-0.5 text-muted-foreground hover:bg-muted hover:text-foreground"
         >
-          <MoreHorizontal className="h-4 w-4" />
-        </button>
+          ({post.topic})
+        </Link>
       </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 px-4 pb-3">
-        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-          {post.topic}
-        </span>
-        <span className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
-          {post.chapter}
-        </span>
+      <div className="px-4 pb-3 pt-2">
+        <h2 className="text-[15px] font-semibold leading-snug">
+          <Link href={contentHref} className="hover:underline">
+            {post.title}
+          </Link>
+        </h2>
+        <p className="mt-1 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
       </div>
 
-      {/* Body */}
-      <div className="px-4 pb-4">
-        <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground">
-          {post.content}
-        </p>
-      </div>
+      {/* Cover launcher */}
+      <Link
+        href={contentHref}
+        className={cn(
+          "group relative block overflow-hidden bg-muted",
+          post.coverAspect === "4:3" ? "aspect-[4/3]" : "aspect-video",
+        )}
+        aria-label={`Open content: ${post.title}`}
+      >
+        <Image
+          src={post.coverUrl}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 640px, 100vw"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+        />
+        <span className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/35 group-focus-visible:bg-black/35">
+          <span className="inline-flex translate-y-2 items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-neutral-900 opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">
+            <MousePointerClick className="size-4" /> Open Content
+          </span>
+        </span>
+      </Link>
 
       {/* Actions */}
-      <div className="flex items-center justify-between border-t border-border px-4 py-3 text-muted-foreground">
-        <button
-          type="button"
-          onClick={() => setLiked((l) => !l)}
-          className={`flex items-center gap-2 text-xs transition-colors hover:text-primary ${
-            liked ? "font-semibold text-primary" : ""
-          }`}
-        >
-          <ThumbsUp className={`h-4 w-4 ${liked ? "fill-current" : ""}`} />
-          <span>{likeCount}</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setCommentsOpen((o) => !o)}
-          className="flex items-center gap-2 text-xs transition-colors hover:text-primary"
-        >
-          <MessageSquare className="h-4 w-4" />
-          <span>{commentCount}</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={handleShare}
-          className="flex items-center gap-2 text-xs transition-colors hover:text-primary"
-        >
-          <Share2 className="h-4 w-4" />
-          <span>{copied ? "Link copied" : shareCount}</span>
-        </button>
+      <div className="space-y-3 p-4">
+        <ReactionBar post={post} />
+        <div className="flex items-center gap-1 border-t border-border pt-3 text-sm">
+          <ActionButton
+            onClick={onSave}
+            active={isSaved}
+            label={isSaved ? "Saved" : "Save"}
+            title={isSaved ? "Remove from Saved" : "Save for later"}
+          >
+            <Bookmark className={cn("size-4", isSaved && "fill-current")} />
+          </ActionButton>
+          <ActionButton
+            onClick={() => setCommentsOpen((v) => !v)}
+            active={commentsOpen}
+            label={commentCount ? `Comment · ${commentCount}` : "Comment"}
+            title={commentsOpen ? "Hide comments" : "Show comments"}
+          >
+            <MessageCircle className="size-4" />
+          </ActionButton>
+          <ActionButton
+            onClick={() => sharePost(post, () => setShareOpen(true))}
+            label="Share"
+            title="Share post"
+          >
+            <Share2 className="size-4" />
+          </ActionButton>
+          <ActionButton
+            onClick={() => setInsightsOpen(true)}
+            label="Insights"
+            title="View post insights"
+            className="ml-auto"
+          >
+            <BarChart3 className="size-4" />
+          </ActionButton>
+        </div>
+        {commentsOpen && (
+          <div className="border-t border-border pt-3">
+            <CommentsSection postId={post.id} postTitle={post.title} autoFocus />
+          </div>
+        )}
       </div>
 
-      {/* Comments */}
-      {commentsOpen && (
-        <div className="space-y-3 border-t border-border px-4 py-3">
-          {comments.map((c) => (
-            <p
-              key={c.id}
-              className="rounded-md bg-muted px-3 py-2 text-sm text-foreground"
-            >
-              {c.text}
-            </p>
-          ))}
-
-          <form onSubmit={handleComment} className="flex gap-2">
-            <input
-              value={draft}
-              onChange={(e) => setDraft(e.target.value)}
-              placeholder="Write a comment..."
-              className="h-9 flex-1 rounded-full border border-input bg-muted/50 px-4 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            />
-            <button
-              type="submit"
-              disabled={!draft.trim()}
-              className="rounded-md bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
-            >
-              Post
-            </button>
-          </form>
-        </div>
-      )}
+      <ShareDialog post={post} open={shareOpen} onOpenChange={setShareOpen} />
+      <InsightsDialog post={post} open={insightsOpen} onOpenChange={setInsightsOpen} />
     </article>
   );
-};
-export default PostCard;
+}
+
+function ActionButton({
+  children,
+  label,
+  title,
+  onClick,
+  active,
+  className,
+}: {
+  children: React.ReactNode;
+  label: string;
+  title: string;
+  onClick: () => void;
+  active?: boolean;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={title}
+      aria-pressed={active}
+      className={cn(
+        "inline-flex h-9 items-center gap-2 rounded-lg px-3 font-medium transition-colors",
+        active
+          ? "bg-foreground/10 text-foreground"
+          : "text-muted-foreground hover:bg-muted hover:text-foreground",
+        className,
+      )}
+    >
+      {children}
+      {label}
+    </button>
+  );
+}
