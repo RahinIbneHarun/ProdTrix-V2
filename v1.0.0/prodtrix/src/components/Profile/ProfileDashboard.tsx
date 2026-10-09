@@ -1,4 +1,4 @@
-import type { ProfileStat, WeeklyActivity } from "@/types/ProfileProps";
+import type { ProfileStat, WeeklyActivity } from "@/interfaces/ProfileProps";
 
 interface ProfileDashboardProps {
   stats: ProfileStat[];
@@ -7,10 +7,7 @@ interface ProfileDashboardProps {
 
 const MAX_BAR_HEIGHT = 96;
 
-const ProfileDashboard=({
-  stats,
-  weekly,
-}: ProfileDashboardProps)=> {
+const ProfileDashboard = ({ stats, weekly }: ProfileDashboardProps) => {
   const maxCount = Math.max(...weekly.map((w) => w.count));
 
   return (
@@ -49,5 +46,5 @@ const ProfileDashboard=({
       </div>
     </div>
   );
-}
+};
 export default ProfileDashboard;

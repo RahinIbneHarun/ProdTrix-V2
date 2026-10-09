@@ -9,9 +9,9 @@ import {
   MessageSquare,
   Share2,
 } from "lucide-react";
-import type { Post } from "@/types/Post";
-import type { TopCreator } from "@/types/TopCreator";
-import type { Profile } from "@/types/ProfileProps";
+import type { Post } from "@/interfaces/Post";
+import type { TopCreator } from "@/interfaces/TopCreator";
+import type { Profile } from "@/interfaces/ProfileProps";
 
 interface FeedData {
   profile: Profile;

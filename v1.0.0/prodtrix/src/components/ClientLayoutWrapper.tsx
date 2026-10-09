@@ -14,13 +14,13 @@ const ClientLayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
   const isPublicShellRoute =
     pathname === "/" ||
-    pathname.startsWith("/Home") ||
+    pathname.startsWith("/home") ||
     pathname.startsWith("/login") ||
     pathname.startsWith("/signup") ||
     pathname.startsWith("/support") ||
-    pathname.startsWith("/Feed") ||
-    pathname.startsWith("/About") ||
-    pathname.startsWith("/Profile");
+    pathname.startsWith("/feed") ||
+    pathname.startsWith("/about") ||
+    pathname.startsWith("/profile");
 
   if (pathname.startsWith("/drawPage")) {
     return <div className="h-screen w-screen overflow-hidden">{children}</div>;

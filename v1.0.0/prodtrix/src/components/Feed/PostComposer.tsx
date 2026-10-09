@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
-import { PostComposerProps } from "@/types/PostComposerProps";
-
+import { PostComposerProps } from "@/interfaces/PostComposerProps";
 
 const EMPTY = { topic: "", chapter: "", content: "" };
 
-const PostComposer =({ onCreate }: PostComposerProps) =>{
+const PostComposer = ({ onCreate }: PostComposerProps) => {
   const [form, setForm] = useState(EMPTY);
 
   const update = (field: keyof typeof EMPTY, value: string) => {
@@ -78,6 +77,6 @@ const PostComposer =({ onCreate }: PostComposerProps) =>{
       </div>
     </form>
   );
-}
+};
 
 export default PostComposer;

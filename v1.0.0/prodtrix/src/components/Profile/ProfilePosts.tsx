@@ -1,4 +1,4 @@
-import type { ProfilePost } from "@/types/ProfileProps";
+import type { ProfilePost } from "@/interfaces/ProfileProps";
 
 interface ProfilePostsProps {
   posts: ProfilePost[];
@@ -6,11 +6,11 @@ interface ProfilePostsProps {
   onTopicChange: (topic: string) => void;
 }
 
-const ProfilePosts=({
+const ProfilePosts = ({
   posts,
   activeTopic,
   onTopicChange,
-}: ProfilePostsProps)=> {
+}: ProfilePostsProps) => {
   const topics = ["All", ...Array.from(new Set(posts.map((p) => p.topic)))];
 
   const visiblePosts =
@@ -63,6 +63,6 @@ const ProfilePosts=({
       )}
     </div>
   );
-}
+};
 
 export default ProfilePosts;

@@ -1,6 +1,6 @@
 "use client";
 
-import { TopicOption } from "@/types/TopicOption";
+import { TopicOption } from "@/interfaces/TopicOption";
 
 interface TopicsCardProps {
   topics: TopicOption[];

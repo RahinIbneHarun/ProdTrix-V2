@@ -1,4 +1,4 @@
-import type { BrandLogoProps } from "@/types/BrandLogoProps";
+import type { BrandLogoProps } from "@/interfaces/BrandLogoProps";
 import Image from "next/image";
 
 export function BrandLogo({ className = "h-10 w-10" }: BrandLogoProps) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { MacWindowControlsProps } from "@/types/MacWindowControlsProps";
+import { MacWindowControlsProps } from "@/interfaces/MacWindowControlsProps";
 
 export function MacWindowControls({ className = "" }: MacWindowControlsProps) {
   return (

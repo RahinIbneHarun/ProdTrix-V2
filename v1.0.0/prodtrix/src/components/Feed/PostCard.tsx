@@ -1,22 +1,15 @@
 "use client";
 
-import { FormEvent, useState, } from "react";
-import {
-  ThumbsUp,
-  MessageSquare,
-  Share2,
-  MoreHorizontal,
-} from "lucide-react";
-import { Post } from "@/types/Post";
-import { Comment } from "@/types/Comment";
+import { FormEvent, useState } from "react";
+import { ThumbsUp, MessageSquare, Share2, MoreHorizontal } from "lucide-react";
+import { Post } from "@/interfaces/Post";
+import { Comment } from "@/interfaces/Comment";
 
 interface PostCardProps {
   post: Post;
 }
 
-
-
-const PostCard=({ post }: PostCardProps) =>{
+const PostCard = ({ post }: PostCardProps) => {
   const [liked, setLiked] = useState(false);
   const [following, setFollowing] = useState(false);
   const [shareCount, setShareCount] = useState(post.shares);
@@ -40,7 +33,7 @@ const PostCard=({ post }: PostCardProps) =>{
     }
   };
 
-  const handleComment = (e:FormEvent) => {
+  const handleComment = (e: FormEvent) => {
     e.preventDefault();
     const text = draft.trim();
     if (!text) return;
@@ -165,5 +158,5 @@ const PostCard=({ post }: PostCardProps) =>{
       )}
     </article>
   );
-}
+};
 export default PostCard;

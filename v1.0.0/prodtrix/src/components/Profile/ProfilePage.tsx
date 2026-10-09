@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { ProfilePageData } from "@/types/ProfileProps";
+import type { ProfilePageData } from "@/interfaces/ProfileProps";
 import ProfileHeader from "./ProfileHeader";
 import ProfileTabs from "./ProfileTabs";
 import ProfileDashboard from "./ProfileDashboard";
@@ -10,7 +10,7 @@ import ProfilePosts from "./ProfilePosts";
 
 type Tab = "dashboard" | "about" | "posts";
 
-const ProfilePage=()=> {
+const ProfilePage = () => {
   const [data, setData] = useState<ProfilePageData | null>(null);
   const [tab, setTab] = useState<Tab>("dashboard");
   const [activeTopic, setActiveTopic] = useState("All");
@@ -61,5 +61,5 @@ const ProfilePage=()=> {
       </div>
     </div>
   );
-}
+};
 export default ProfilePage;

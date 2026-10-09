@@ -26,7 +26,7 @@ const SignupPage = () => {
     <div className="relative px-4 py-16">
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary/20 blur-[140px] pointer-events-none dark:block hidden" />
 
-      <div className="relative z-10 grid w-full max-w-5xl grid-cols-1 gap-14 items-center lg:grid-cols-2">
+      <div className="relative z-10 grid w-full grid-cols-1 gap-14 items-center lg:grid-cols-2">
         {/* Left brand column */}
         <div className="hidden lg:block space-y-6">
           <p className="theme-label">● ProdTrix PLATFORM</p>
