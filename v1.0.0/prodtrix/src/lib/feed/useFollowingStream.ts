@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useFeedStore } from "@/store/feed-store";
-import { useFeedHydrated } from "./use-feed-hydrated";
+import { useFeedHydrated } from "./useFeedHydrated";
 
 const STREAM_URL = "/backend-api/feed/stream";
 const DEMO_INTERVAL_MS = 45_000;
@@ -26,7 +26,8 @@ export function useFollowingStream() {
     if (!hydrated || typeof window === "undefined") return;
 
     const handle = ({ creatorId, postId, title }: NewPostEvent) => {
-      const { following, incrementNewPosts, pushNotification } = useFeedStore.getState();
+      const { following, incrementNewPosts, pushNotification } =
+        useFeedStore.getState();
       if (!following.includes(creatorId)) return;
       incrementNewPosts(creatorId);
       pushNotification({
@@ -46,7 +47,9 @@ export function useFollowingStream() {
       demoTimer = window.setInterval(() => {
         const { following } = useFeedStore.getState();
         if (!following.length) return;
-        handle({ creatorId: following[Math.floor(Math.random() * following.length)] });
+        handle({
+          creatorId: following[Math.floor(Math.random() * following.length)],
+        });
       }, DEMO_INTERVAL_MS);
     };
 

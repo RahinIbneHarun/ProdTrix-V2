@@ -13,7 +13,7 @@ import { ReactionBar } from "@/components/feed/ReactionBar";
 import { ShareDialog, sharePost } from "@/components/feed/ShareDialog";
 import { VersionBadge } from "@/components/feed/VersionBadge";
 import { getCreator, getPost } from "@/data/feed-data";
-import { useWatchTimer } from "@/lib/feed/use-watch-timer";
+import { useWatchTimer } from "@/lib/feed/useWatchTimer";
 import { filtersToQuery, formatDuration } from "@/lib/feed/utils";
 import { cn } from "@/lib/utils";
 

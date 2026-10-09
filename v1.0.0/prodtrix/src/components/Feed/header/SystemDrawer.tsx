@@ -24,7 +24,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useTodaysBirthdays } from "@/lib/feed/use-birthdays";
+import { useTodaysBirthdays } from "@/lib/feed/useBirthdays";
 import { useFeedStore } from "@/store/feed-store";
 import { HeaderIconButton } from "./HeaderIconButton";
 
@@ -35,10 +35,20 @@ export function SystemDrawer() {
 
   const links = [
     { href: "/feed/settings", label: "Settings", icon: Settings },
-    { href: "/feed/saved", label: "Saved", icon: Bookmark, meta: savedCount || undefined },
+    {
+      href: "/feed/saved",
+      label: "Saved",
+      icon: Bookmark,
+      meta: savedCount || undefined,
+    },
     { href: "/feed/help", label: "Help", icon: HelpCircle },
     { href: "/support", label: "Support / Contact Us", icon: LifeBuoy },
-    { href: "/feed/birthdays", label: "Birthday reminders", icon: Cake, meta: birthdays.length ? `${birthdays.length} today` : undefined },
+    {
+      href: "/feed/birthdays",
+      label: "Birthday reminders",
+      icon: Cake,
+      meta: birthdays.length ? `${birthdays.length} today` : undefined,
+    },
     { href: "/feed/terms", label: "Terms & Policies", icon: FileText },
     {
       href: "/feed/verify",

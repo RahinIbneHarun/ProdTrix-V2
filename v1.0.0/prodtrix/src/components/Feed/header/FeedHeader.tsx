@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, Search, SlidersHorizontal, User, X } from "lucide-react";
 import { BrandLogo } from "@/components/shared/BrandLogo";
-import { initials, useCurrentUser } from "@/lib/feed/use-current-user";
+import { initials, useCurrentUser } from "@/lib/feed/useCurrentUser";
 import { activeFilterCount, filtersFromParams, filtersToQuery } from "@/lib/feed/utils";
 import { cn } from "@/lib/utils";
 import { FilterDrawer } from "./FilterDrawer";

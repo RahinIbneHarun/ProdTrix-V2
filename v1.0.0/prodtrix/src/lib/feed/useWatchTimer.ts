@@ -2,14 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useFeedStore } from "@/store/feed-store";
-import { useFeedHydrated } from "./use-feed-hydrated";
+import { useFeedHydrated } from "./useFeedHydrated";
 
 /** Viewport dwelling with no interaction for longer than this pauses the timer. */
 export const INACTIVITY_LIMIT_MS = 60_000;
 const TICK_MS = 1_000;
 const FLUSH_EVERY_S = 5;
 
-const ACTIVITY_EVENTS = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "wheel"] as const;
+const ACTIVITY_EVENTS = [
+  "mousemove",
+  "mousedown",
+  "keydown",
+  "scroll",
+  "touchstart",
+  "wheel",
+] as const;
 
 /**
  * Records one view for `postId` and accumulates *active* reading seconds.
@@ -41,7 +48,9 @@ export function useWatchTimer(postId: string | undefined) {
     const markActive = () => {
       lastActivity.current = Date.now();
     };
-    ACTIVITY_EVENTS.forEach((e) => window.addEventListener(e, markActive, { passive: true }));
+    ACTIVITY_EVENTS.forEach((e) =>
+      window.addEventListener(e, markActive, { passive: true }),
+    );
     document.addEventListener("visibilitychange", markActive);
 
     const flush = () => {
