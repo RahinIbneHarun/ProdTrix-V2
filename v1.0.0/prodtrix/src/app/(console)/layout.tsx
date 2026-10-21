@@ -2,7 +2,7 @@ import React from "react";
 
 import { BrandLogo } from "@/components/shared/BrandLogo";
 import Link from "next/link";
-import { Bell, Home, Search, Settings } from "lucide-react";
+// import { Bell, Home, Search, Settings } from "lucide-react";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 
 interface ConsoleLayoutProps {

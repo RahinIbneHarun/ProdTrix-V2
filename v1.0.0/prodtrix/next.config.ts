@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const normalizeBaseUrl = (value:string) => {
+const normalizeBaseUrl = (value: string) => {
   if (value.startsWith("http://") || value.startsWith("https://")) {
     return value.replace(/\/$/, "");
   }
@@ -28,6 +28,7 @@ const nextConfig = {
         protocol: "http",
         hostname: "**",
       },
+      { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
 
@@ -60,21 +61,21 @@ const nextConfig = {
     ];
   },
 
-  async rewrites() {
-    return [
-      // Optional: only use this for public backend endpoints.
-      {
-        source: "/backend-api/:path*",
-        destination: `${backendApiBaseUrl}/:path*`,
-      },
+  // async rewrites() {
+  //   return [
+  //     // Optional: only use this for public backend endpoints.
+  //     {
+  //       source: "/backend-api/:path*",
+  //       destination: `${backendApiBaseUrl}/:path*`,
+  //     },
 
-      // Optional: auth server proxy if you need it from browser.
-      {
-        source: "/auth-api/:path*",
-        destination: `${authServerBaseUrl}/:path*`,
-      },
-    ];
-  },
+  //     // Optional: auth server proxy if you need it from browser.
+  //     {
+  //       source: "/auth-api/:path*",
+  //       destination: `${authServerBaseUrl}/:path*`,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
