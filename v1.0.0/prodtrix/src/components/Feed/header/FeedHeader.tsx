@@ -7,7 +7,11 @@ import { User, X } from "lucide-react";
 import { FeedIcon } from "../FeedIcon";
 import { BrandLogo } from "@/components/shared/BrandLogo";
 import { initials, useCurrentUser } from "@/lib/feed/useCurrentUser";
-import { activeFilterCount, filtersFromParams, filtersToQuery } from "@/lib/feed/utils";
+import {
+  activeFilterCount,
+  filtersFromParams,
+  filtersToQuery,
+} from "@/lib/feed/utils";
 import { cn } from "@/lib/utils";
 import { FilterDrawer } from "./FilterDrawer";
 import { FriendAddMenu } from "./FriendAddMenu";
@@ -36,7 +40,10 @@ export function FeedHeader() {
   useEffect(() => {
     if (!onFeed || query === filters.q) return;
     const t = setTimeout(() => {
-      router.replace(`/feed${filtersToQuery({ ...filters, q: query.trim() })}`, { scroll: false });
+      router.replace(
+        `/feed${filtersToQuery({ ...filters, q: query.trim() })}`,
+        { scroll: false },
+      );
     }, 300);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +73,10 @@ export function FeedHeader() {
 
   const searchBox = (
     <form onSubmit={submit} role="search" className="relative w-full">
-      <FeedIcon name="magnifying-glass" className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+      <FeedIcon
+        name="magnifying-glass"
+        className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+      />
       <input
         ref={inputRef}
         type="search"
@@ -83,7 +93,9 @@ export function FeedHeader() {
         title="Filters"
         className={cn(
           "absolute right-1 top-1/2 inline-flex size-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors",
-          filterCount ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground",
+          filterCount
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground hover:bg-muted hover:text-foreground",
         )}
       >
         <FeedIcon name="settings" />
@@ -103,9 +115,16 @@ export function FeedHeader() {
           <FeedIcon name="back-button" className="size-5" />
         </HeaderIconButton>
 
-        <Link href="/feed" onClick={onLogo} className="flex shrink-0 items-center gap-2" aria-label="ProdTrix — back to top of feed">
+        <Link
+          href="/feed"
+          onClick={onLogo}
+          className="flex shrink-0 items-center gap-2"
+          aria-label="ProdTrix — back to top of feed"
+        >
           <BrandLogo className="h-8 w-8 rounded-lg" />
-          <span className="hidden text-lg font-semibold tracking-tight md:inline">ProdTrix</span>
+          <span className="hidden text-lg font-semibold tracking-tight md:inline">
+            ProdTrix
+          </span>
         </Link>
 
         <div className="mx-2 hidden min-w-0 flex-1 sm:block md:mx-6">
@@ -119,12 +138,16 @@ export function FeedHeader() {
           onClick={() => setMobileSearch((v) => !v)}
           aria-expanded={mobileSearch}
         >
-          {mobileSearch ? <X /> : <FeedIcon name="magnifying-glass" className="size-5" />}
+          {mobileSearch ? (
+            <X />
+          ) : (
+            <FeedIcon name="magnifying-glass" className="size-5" />
+          )}
         </HeaderIconButton>
         <FriendAddMenu />
         <NotificationsMenu />
         <Link
-          href="/admin/profile"
+          href="/profile"
           aria-label="Your profile"
           title="Your profile"
           className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground ring-2 ring-transparent transition hover:ring-border"
@@ -134,7 +157,11 @@ export function FeedHeader() {
         <SystemDrawer />
       </div>
 
-      {mobileSearch && <div className="border-t border-border px-3 py-2 sm:hidden">{searchBox}</div>}
+      {mobileSearch && (
+        <div className="border-t border-border px-3 py-2 sm:hidden">
+          {searchBox}
+        </div>
+      )}
 
       <FilterDrawer open={filterOpen} onOpenChange={setFilterOpen} />
     </header>
