@@ -3,6 +3,8 @@ export interface Profile {
   headline: string;
   following?: number;
   followers?: number;
+  cover?: string;
+  avatar?: string;
 }
 
 export interface ProfilePost {

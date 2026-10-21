@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HelpCircle } from "lucide-react";
-import { PageHeading } from "@/components/feed/PageHeading";
+import { PageHeading } from "@/components/Feed/PageHeading";
 
 const FAQ = [
   {

@@ -1,5 +1,5 @@
 import { FileText } from "lucide-react";
-import { PageHeading } from "@/components/feed/PageHeading";
+import { PageHeading } from "@/components/Feed/PageHeading";
 
 const SECTIONS = [
   {

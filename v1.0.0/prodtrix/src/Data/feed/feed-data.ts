@@ -147,13 +147,29 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "16:9",
-    reactions: { gold: 42, diamond: 18, clap: 67, tasty: 5 },
+    reactions: { gold: 42, diamond: 18, clap: 67, sad: 5 },
     versions: [
-      { version: 1, editedAt: "2026-09-10T09:00:00.000Z", note: "Initial publish" },
-      { version: 2, editedAt: "2026-09-18T14:20:00.000Z", note: "Added determinant area overlay" },
-      { version: 3, editedAt: "2026-09-25T08:45:00.000Z", note: "Fixed inverse example and added quiz" },
+      {
+        version: 1,
+        editedAt: "2026-09-10T09:00:00.000Z",
+        note: "Initial publish",
+      },
+      {
+        version: 2,
+        editedAt: "2026-09-18T14:20:00.000Z",
+        note: "Added determinant area overlay",
+      },
+      {
+        version: 3,
+        editedAt: "2026-09-25T08:45:00.000Z",
+        note: "Fixed inverse example and added quiz",
+      },
     ],
-    insights: { viewCount: 1840, cumulativeSeconds: 331200, uniqueViewers: 1210 },
+    insights: {
+      viewCount: 1840,
+      cumulativeSeconds: 331200,
+      uniqueViewers: 1210,
+    },
     createdAt: "2026-09-25T08:45:00.000Z",
   },
   {
@@ -170,10 +186,18 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "16:9",
-    reactions: { gold: 31, diamond: 25, clap: 40, tasty: 2 },
+    reactions: { gold: 31, diamond: 25, clap: 40, sad: 2 },
     versions: [
-      { version: 1, editedAt: "2026-09-20T11:00:00.000Z", note: "Initial publish" },
-      { version: 2, editedAt: "2026-09-24T16:10:00.000Z", note: "Added air-resistance model" },
+      {
+        version: 1,
+        editedAt: "2026-09-20T11:00:00.000Z",
+        note: "Initial publish",
+      },
+      {
+        version: 2,
+        editedAt: "2026-09-24T16:10:00.000Z",
+        note: "Added air-resistance model",
+      },
     ],
     insights: { viewCount: 960, cumulativeSeconds: 201600, uniqueViewers: 702 },
     createdAt: "2026-09-24T16:10:00.000Z",
@@ -192,9 +216,13 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "4:3",
-    reactions: { gold: 12, diamond: 9, clap: 28, tasty: 1 },
+    reactions: { gold: 12, diamond: 9, clap: 28, sad: 1 },
     versions: [
-      { version: 1, editedAt: "2026-09-23T07:30:00.000Z", note: "Initial publish" },
+      {
+        version: 1,
+        editedAt: "2026-09-23T07:30:00.000Z",
+        note: "Initial publish",
+      },
     ],
     insights: { viewCount: 410, cumulativeSeconds: 49200, uniqueViewers: 355 },
     createdAt: "2026-09-23T07:30:00.000Z",
@@ -213,12 +241,24 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "16:9",
-    reactions: { gold: 55, diamond: 34, clap: 88, tasty: 3 },
+    reactions: { gold: 55, diamond: 34, clap: 88, sad: 3 },
     versions: [
-      { version: 1, editedAt: "2026-09-12T10:00:00.000Z", note: "Initial publish" },
-      { version: 2, editedAt: "2026-09-22T12:00:00.000Z", note: "Added recursion stack panel" },
+      {
+        version: 1,
+        editedAt: "2026-09-12T10:00:00.000Z",
+        note: "Initial publish",
+      },
+      {
+        version: 2,
+        editedAt: "2026-09-22T12:00:00.000Z",
+        note: "Added recursion stack panel",
+      },
     ],
-    insights: { viewCount: 2310, cumulativeSeconds: 462000, uniqueViewers: 1604 },
+    insights: {
+      viewCount: 2310,
+      cumulativeSeconds: 462000,
+      uniqueViewers: 1604,
+    },
     createdAt: "2026-09-22T12:00:00.000Z",
   },
   {
@@ -235,9 +275,13 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "4:3",
-    reactions: { gold: 8, diamond: 4, clap: 19, tasty: 76 },
+    reactions: { gold: 8, diamond: 4, clap: 19, sad: 76 },
     versions: [
-      { version: 1, editedAt: "2026-09-21T18:00:00.000Z", note: "Initial publish" },
+      {
+        version: 1,
+        editedAt: "2026-09-21T18:00:00.000Z",
+        note: "Initial publish",
+      },
     ],
     insights: { viewCount: 530, cumulativeSeconds: 58300, uniqueViewers: 488 },
     createdAt: "2026-09-21T18:00:00.000Z",
@@ -256,11 +300,23 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "16:9",
-    reactions: { gold: 15, diamond: 6, clap: 22, tasty: 0 },
+    reactions: { gold: 15, diamond: 6, clap: 22, sad: 0 },
     versions: [
-      { version: 1, editedAt: "2026-09-15T09:00:00.000Z", note: "Initial publish" },
-      { version: 2, editedAt: "2026-09-17T09:00:00.000Z", note: "Added surplus shading" },
-      { version: 3, editedAt: "2026-09-19T15:00:00.000Z", note: "Tax wedge scenario" },
+      {
+        version: 1,
+        editedAt: "2026-09-15T09:00:00.000Z",
+        note: "Initial publish",
+      },
+      {
+        version: 2,
+        editedAt: "2026-09-17T09:00:00.000Z",
+        note: "Added surplus shading",
+      },
+      {
+        version: 3,
+        editedAt: "2026-09-19T15:00:00.000Z",
+        note: "Tax wedge scenario",
+      },
       { version: 4, editedAt: "2026-09-20T15:00:00.000Z", note: "Copy edits" },
     ],
     insights: { viewCount: 720, cumulativeSeconds: 93600, uniqueViewers: 590 },
@@ -280,9 +336,13 @@ export const FEED_POSTS: FeedPost[] = [
     coverUrl:
       "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80",
     coverAspect: "16:9",
-    reactions: { gold: 20, diamond: 11, clap: 30, tasty: 0 },
+    reactions: { gold: 20, diamond: 11, clap: 30, sad: 0 },
     versions: [
-      { version: 1, editedAt: "2026-09-26T06:00:00.000Z", note: "Initial publish" },
+      {
+        version: 1,
+        editedAt: "2026-09-26T06:00:00.000Z",
+        note: "Initial publish",
+      },
     ],
     insights: { viewCount: 140, cumulativeSeconds: 19600, uniqueViewers: 131 },
     createdAt: "2026-09-26T06:00:00.000Z",
@@ -362,7 +422,7 @@ export const SAMPLE_COMMENTS: FeedComment[] = [
 ];
 
 export const SUGGESTED_FRIENDS = ["c-nusrat", "c-mitu", "c-farhan"];
-export const INCOMING_REQUESTS = ["c-farhan"];
+export const INCOMING_REQUESTS = ["c-farhan", "c-priya-nair", "c-daniel-park"];
 
 export function getCreator(id: string): FeedCreator | undefined {
   return CREATORS.find((c) => c.id === id);

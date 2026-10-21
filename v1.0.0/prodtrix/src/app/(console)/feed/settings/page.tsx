@@ -4,7 +4,7 @@ import Link from "next/link";
 import { RotateCcw, Settings } from "lucide-react";
 import { toast } from "sonner";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { PageHeading } from "@/components/feed/PageHeading";
+import { PageHeading } from "@/components/Feed/PageHeading";
 import { useFeedStore } from "@/store/feed-store";
 
 export default function FeedSettingsPage() {

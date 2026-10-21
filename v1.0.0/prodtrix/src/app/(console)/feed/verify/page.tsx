@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { BadgeCheck, Check } from "lucide-react";
 import { toast } from "sonner";
-import { PageHeading } from "@/components/feed/PageHeading";
+import { PageHeading } from "@/components/Feed/PageHeading";
 import { cn } from "@/lib/utils";
 import { useFeedStore } from "@/store/feed-store";
 

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { Cake } from "lucide-react";
 import { toast } from "sonner";
-import { CreatorAvatar } from "@/components/feed/CreatorAvatar";
-import { PageHeading } from "@/components/feed/PageHeading";
+import { CreatorAvatar } from "@/components/Feed/CreatorAvatar";
+import { PageHeading } from "@/components/Feed/PageHeading";
 import { useUpcomingBirthdays } from "@/lib/feed/useBirthdays";
 import { useFeedStore } from "@/store/feed-store";
 

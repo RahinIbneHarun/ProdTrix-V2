@@ -25,9 +25,7 @@ export function FeedShell({ children }: { children: React.ReactNode }) {
         <Gap className="lg:block" />
         <LeftSidebar />
         <Gap className="lg:block" />
-        <main className="min-w-0 px-4 py-6 sm:px-6 lg:flex-[0_1_52rem] lg:px-0">
-          {children}
-        </main>
+        <main className="min-w-0 px-4 py-6 sm:px-6 lg:flex-[0_1_52rem] lg:px-0">{children}</main>
         <Gap className="lg:block" />
         <RightSidebar />
         <Gap className="xl:block" />

@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { BadgeCheck } from "lucide-react";
-import { CreatorAvatar } from "@/components/feed/CreatorAvatar";
-import { FollowButton } from "@/components/feed/FollowButton";
-import { PostCard } from "@/components/feed/PostCard";
-import { FEED_POSTS, getCreator } from "@/data/feed-data";
+import { FeedIcon } from "@/components/Feed/FeedIcon";
+import { CreatorAvatar } from "@/components/Feed/CreatorAvatar";
+import { FollowButton } from "@/components/Feed/FollowButton";
+import { PostCard } from "@/components/Feed/PostCard";
+import { FEED_POSTS, getCreator } from "@/Data/feed/feed-data";
+
 
 export default function CreatorProfilePage() {
   const { id } = useParams<{ id: string }>();
@@ -34,7 +35,7 @@ export default function CreatorProfilePage() {
         <div>
           <h1 className="flex items-center justify-center gap-1.5 text-xl font-semibold">
             {creator.name}
-            {creator.verified && <BadgeCheck className="size-5 fill-sky-500 text-white" aria-label="Verified" />}
+            {creator.verified && <FeedIcon name="approved" className="size-5" label="Verified" />}
           </h1>
           <p className="text-sm text-muted-foreground">@{creator.handle}</p>
           <p className="mt-2 text-sm">{creator.headline}</p>

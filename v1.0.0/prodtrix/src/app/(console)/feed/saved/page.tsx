@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { Bookmark } from "lucide-react";
-import { PageHeading } from "@/components/feed/PageHeading";
-import { PostCard } from "@/components/feed/PostCard";
-import { getPost } from "@/data/feed-data";
+import { PageHeading } from "@/components/Feed/PageHeading";
+import { PostCard } from "@/components/Feed/PostCard";
+import { getPost } from "@/Data/feed/feed-data";
 import type { FeedPost } from "@/interfaces/feed.interface";
 import { useFeedStore } from "@/store/feed-store";
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { FeedCreator } from "@/interfaces/feed.interface";
 
- const CreatorAvatar=({
+export function CreatorAvatar({
   creator,
   size = 40,
   className,
@@ -12,7 +12,7 @@ import type { FeedCreator } from "@/interfaces/feed.interface";
   creator: Pick<FeedCreator, "name" | "avatarUrl">;
   size?: number;
   className?: string;
-})=> {
+}) {
   return (
     <span
       className={cn(
@@ -35,4 +35,3 @@ import type { FeedCreator } from "@/interfaces/feed.interface";
     </span>
   );
 }
-export default CreatorAvatar;

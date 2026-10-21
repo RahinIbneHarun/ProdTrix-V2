@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Check, Search, UserPlus, X } from "lucide-react";
+import { Check, X } from "lucide-react";
+import { FeedIcon } from "../FeedIcon";
 import { toast } from "sonner";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { CREATORS, SUGGESTED_FRIENDS, getCreator } from "@/Data/feed/feed-data";
@@ -13,6 +14,7 @@ import { HeaderIconButton } from "./HeaderIconButton";
 
 export function FriendAddMenu() {
   const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
   const friends = useFeedStore((s) => s.friends);
   const sent = useFeedStore((s) => s.sentRequests);
   const incoming = useFeedStore((s) => s.incomingRequests);
@@ -30,16 +32,16 @@ export function FriendAddMenu() {
   const requests = incoming.map(getCreator).filter((c): c is FeedCreator => Boolean(c));
 
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <HeaderIconButton label="Add friend / connect" badge={incoming.length}>
-          <UserPlus />
+          <FeedIcon name="people" className="size-5" />
         </HeaderIconButton>
       </PopoverTrigger>
       <PopoverContent align="end" className="w-[min(22rem,calc(100vw-24px))] p-0">
         <div className="border-b border-border p-3">
           <div className="relative">
-            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+            <FeedIcon name="magnifying-glass" className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -116,6 +118,14 @@ export function FriendAddMenu() {
             </Section>
           )}
         </div>
+
+        <Link
+          href="/feed/friends"
+          onClick={() => setOpen(false)}
+          className="block border-t border-border px-4 py-2.5 text-center text-sm font-semibold text-primary hover:bg-muted dark:text-foreground"
+        >
+          See all friends &amp; requests
+        </Link>
       </PopoverContent>
     </Popover>
   );
